@@ -1,0 +1,23 @@
+.right_header {
+  display: flex;
+  gap: 20px;
+}
+.right_header_link {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.logOut {
+  cursor: pointer;
+  margin: auto;
+}
+.userFoto {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.userName {
+  margin: auto;
+}

@@ -3,7 +3,7 @@ import ContactsList from 'components/ContactsList/ContactsList';
 import { Filter } from 'components/Filter/Filter';
 import React from 'react';
 
-import css from '../../components/App/App.module.css';
+
 
 import { selectContacts, selectVisibleForm } from 'redux/contacts/selectors';
 import { useDispatch, useSelector } from 'react-redux';
@@ -20,12 +20,12 @@ const Home = () => {
   };
 
   return (
-    <div className={css.content}>
+    <div>
       <h1 className={css.content_text}>Phonebook</h1>
       <ContactForm />
       {!visibleForm && (
         <button
-          className={css.new_contact_btn}
+         
           onClick={hendleToggleVisibleForm}
         >
           new Contact
@@ -33,13 +33,13 @@ const Home = () => {
       )}
       {contacts.length > 0 ? (
         <>
-          <h2 className={css.contact}>Contacts</h2>
+          <h2>Contacts</h2>
 
           <Filter />
           <ContactsList />
         </>
       ) : (
-        <p>У Вас поки відсутні контакти</p>
+        <p>You dont have contacts yet</p>
       )}
     </div>
   );

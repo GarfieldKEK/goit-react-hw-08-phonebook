@@ -2,7 +2,7 @@ import { Button, Form, Input, Typography } from 'antd';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import css from './RegisterPage.module.css';
+
 import { registrationUser } from 'redux/auth/authOperations';
 
 const RegisterPage = () => {
@@ -24,15 +24,15 @@ const RegisterPage = () => {
 
   return (
     <div className={css.register}>
-      <Form className={css.registerForm} onSubmitCapture={handleRegistracion}>
-        <Typography.Title className={css.registerTitle}>
+      <Form  onSubmitCapture={handleRegistracion}>
+        <Typography.Title >
           Register
         </Typography.Title>
         <Form.Item
           rules={[
             {
               required: true,
-              message: "Будь ласка введіть своє ім'я ",
+              message: "Pls write your name ",
             },
           ]}
           label="Name"
@@ -52,7 +52,7 @@ const RegisterPage = () => {
             {
               required: true,
               type: 'email',
-              message: 'Не вірний email ',
+              message: 'Email address is not required',
             },
           ]}
           label="Email"
@@ -70,7 +70,7 @@ const RegisterPage = () => {
           rules={[
             {
               required: true,
-              message: 'Будь ласка введіть свій пароль ',
+              message: 'Pls enter password ',
             },
           ]}
           label="Password"
@@ -84,19 +84,19 @@ const RegisterPage = () => {
           />
         </Form.Item>
 
-        {/* {err && <div style={{ color: 'red' }}>{err}</div>} */}
+      
         <Button
           type="primary"
           htmlType="submit"
           block
-          // onClick={handleRegistracion}
+          
         >
           Зарееструватись
-          {/* <Link to={'/login'}>Зарееструватись</Link> */}
+          
         </Button>
 
-        <div className={css.info}>
-          Вже зареестровані?
+        <div>
+         Already registered?
           <Link to={'/login'}>
             <span>Login</span>
           </Link>

@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 import { useState } from 'react';
 import { loginUser } from 'redux/auth/authOperations';
-import css from './LoginPage.module.css';
+
 import { fetchContacts } from 'redux/contacts/operations';
 
 const LoginPage = () => {
@@ -36,9 +36,9 @@ const LoginPage = () => {
   };
 
   return (
-    <div className={css.login}>
-      <Form className={css.loginForm}>
-        <Typography.Title className={css.loginTitle}>Login</Typography.Title>
+    <div >
+      <Form >
+        <Typography.Title >Login</Typography.Title>
         <Form.Item
           rules={[
             {
@@ -61,7 +61,7 @@ const LoginPage = () => {
           rules={[
             {
               required: true,
-              message: 'Будь ласка введіть свій пароль ',
+              message: 'Pls enter yout password',
             },
           ]}
           label="Password"
@@ -77,26 +77,26 @@ const LoginPage = () => {
           Login
         </Button>
         <Divider style={{ borderColor: 'green' }}>or Login with</Divider>
-        <div className={css.socialLogin}>
+        <div>
           <GoogleOutlined
-            className={css.pointer}
+          
             name="google"
             onClick={() => SocialLogin('Google')}
             style={{ color: 'red' }}
           />
           <FacebookFilled
-            className={css.pointer}
+          
             onClick={() => SocialLogin('Facebook')}
             style={{ color: 'blue' }}
           />
           <TwitterOutlined
-            className={css.pointer}
+           
             onClick={() => SocialLogin('Twitter')}
             style={{ color: 'cyan' }}
           />
         </div>
-        <div className={css.info}>
-          Ще не рееструвались?
+        <div >
+          Not registered yet?
           <Link to={'/register'}>
             <span>Register</span>
           </Link>

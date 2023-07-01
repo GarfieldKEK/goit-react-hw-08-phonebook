@@ -63,7 +63,7 @@ export const ContactForm = () => {
             onChange={handleChange}
           />
         </label>
-        <label className={css.label}>
+        <label >
           Telefon
           <input
             

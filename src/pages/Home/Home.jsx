@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className={css.content_text}>Phonebook</h1>
+      <h1>Phonebook</h1>
       <ContactForm />
       {!visibleForm && (
         <button

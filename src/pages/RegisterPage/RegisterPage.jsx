@@ -23,7 +23,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className={css.register}>
+    <div >
       <Form  onSubmitCapture={handleRegistracion}>
         <Typography.Title >
           Register
@@ -91,13 +91,13 @@ const RegisterPage = () => {
           block
           
         >
-          Зарееструватись
+          Register
           
         </Button>
 
         <div>
          Already registered?
-          <Link to={'/login'}>
+          <Link to={'/login'}>  
             <span>Login</span>
           </Link>
         </div>
